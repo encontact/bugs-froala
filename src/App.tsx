@@ -561,9 +561,13 @@ const Table2 = () => {
     <div>
       <h2>PROD-2576 reproduction steps</h2>
       <p>This table came though Ctrl+C from online Office</p>
-      <p>Step 1: Click on button "Click to copy" to simulate the payload that came from Office(online version)</p>
       <button onClick={() => navigator.clipboard.write([new ClipboardItem({"text/html": payload2})])}>Click to copy</button>
-      <h2>Expected: no layout collapse</h2>
+      <p>Step 1: Click on button "Click to copy" to simulate the payload that came from Office(online version)</p>
+      <p>Step 2: Paste in the editor and observe the lost style and the layout shift/collapse</p>
+      <img src="../public/froala-bug4.png" style={{ maxWidth: "100%", height: "auto" }} />
+      <p>How should looklike:</p>
+      <img src="../public/froala-bug3.png" style={{ maxWidth: "100%", height: "auto" }} />
+      <h2>Expected: no layout shift/collapse</h2>
       <p></p>
     </div>
   );
