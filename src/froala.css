@@ -1,0 +1,105 @@
+/* ==========================================
+   FROALA EDITOR - AJUSTES GERAIS
+   ========================================== */
+   .fr-view {
+    p + p { margin-top: 0 !important; }
+    ul { list-style-type: disc; }
+    padding: 10px 0px 45px 10px !important;
+  }
+  
+  .fr-toolbar.fr-top {
+    position: sticky !important;
+    z-index: 10 !important;
+    top: var(--froala-note-sticky-toolbar-top, 0px) !important;
+  }
+  
+  .fr-box.fr-basic .fr-wrapper { border: none !important; }
+  .fr-toolbar, .fr-second-toolbar { border: none !important; }
+  .fr-second-toolbar { display: none; }
+  .fr-newline { margin: 0px !important; }
+  .fr-popup { z-index: 1050 !important; }
+  
+  /* ==========================================
+     AT.JS - CONTAINER PRINCIPAL
+     ========================================== */
+  .atwho-view {
+    position: fixed !important;
+    z-index: 100000 !important;
+    min-width: 250px;
+    max-width: 350px;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    padding: 4px;
+    overflow: hidden !important;
+    font-family: Roboto, sans-serif;
+  }
+  
+  .atwho-view ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    max-height: 280px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #a1a1aa #f4f4f5;
+  }
+  
+  .atwho-view ul::-webkit-scrollbar { width: 4px; }
+  .atwho-view ul::-webkit-scrollbar-track { background: #f4f4f5; border-radius: 4px; }
+  .atwho-view ul::-webkit-scrollbar-thumb { background-color: #a1a1aa; border-radius: 4px; }
+  
+  /* ==========================================
+     AT.JS - ITENS
+     ========================================== */
+  .atwho-view li {
+    display: flex;
+    flex-direction: column;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    list-style: none;
+  }
+  
+  .atwho-view li.cur,
+  .atwho-view li:hover {
+    background-color: #f4f4f5;
+  }
+  
+  .atwho-view .mention-name {
+    font-size: 14px;
+    font-weight: 500;
+    color: #27272a;
+  }
+  
+  .atwho-view .mention-email {
+    font-size: 12px;
+    color: #71717a;
+  }
+  
+  /* ==========================================
+     AT.JS - LOADING
+     ========================================== */
+  .atwho-view .atwho-loading {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 16px;
+    min-height: 50px;
+  }
+  
+  .atwho-view .atwho-loading::after {
+    content: '';
+    width: 18px;
+    height: 18px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #a1a1aa;
+    border-radius: 50%;
+    animation: atwho-spin 0.8s linear infinite;
+    display: block;
+  }
+  
+  @keyframes atwho-spin {
+    to { transform: rotate(360deg); }
+  }
