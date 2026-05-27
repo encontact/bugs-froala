@@ -560,7 +560,7 @@ const Table2 = () => {
   return (
     <div>
       <h2>PROD-2576 reproduction steps</h2>
-      <p>This table came though Ctrl+C from online Office</p>
+      <p>This table came through Ctrl+C from online Office</p>
       <button onClick={() => navigator.clipboard.write([new ClipboardItem({"text/html": payload2})])}>Click to copy</button>
       <p>Step 1: Click on button "Click to copy" to simulate the payload that came from Office(online version)</p>
       <p>Step 2: Paste in the editor and observe the lost style and the layout shift/collapse</p>
